@@ -1,0 +1,8 @@
+stu_dict = {}
+for _ in range(int(input())):
+       name , *line = input().split()
+       scores = list(map(float,line))
+       stu_dict[name] = scores
+
+query = input()
+print("%.2f" % (sum(stu_dict.get(query))/len(stu_dict.get(query))))
